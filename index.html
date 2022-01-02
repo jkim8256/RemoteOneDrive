@@ -14,20 +14,13 @@
     </form>
 
     <!-- searching for which category/folder to work on -->
-    <form id="packaging">
-        <button>Packaging</button>
-    </form>
-    
-    <script type="text/javascript">
-        document.getElementById("packaging").onclick = function () {
-            location.href = "html/packaging.html";
-        };
-    </script>
-    
-    <form id="manufacturing">
+    <form class = task id="packaging">
+        <button onclick="location.href = html\packaging.html">Packaging</button>
+    </form>  
+    <form class = task id="manufacturing">
         <button>Manufacturing</button>
     </form>
-    <form id="inspection">
+    <form class = task id="inspection">
         <button>Inspection</button>
     </form>
     <p> my question now is, are all todos and templates the same for each category?</p>
