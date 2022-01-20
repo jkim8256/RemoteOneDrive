@@ -20,7 +20,8 @@ def output():
 def download():
     OD.download()
 
-    return render_template("index.html")
+    #return render_template("index.html")
+    return "success"
 
 @app.route("/upload")
 def upload():
