@@ -34,62 +34,11 @@ def upload():
 def packaging():
     return render_template("html/packaging.html")
 
-@app.route("/manufacturing")
-def manufacturing():
-    return render_template("html/manufacturing.html")
-
-@app.route("/inspection")
-def inspection():
-    return render_template("html/inspection.html")
-
-@app.route("/PO")
-def po():
-    return render_template("html/PO.html")
-
-
 
 # tasks under packaging
 @app.route("/packaging/peek_anchor")
 def peek_anchor():
     return render_template("html/packaging/peek_anchor.html")
-
-@app.route("/packaging/twist_anchor")
-def twist_anchor():
-    return render_template("html/packaging/twist_anchor.html")
-
-@app.route("/packaging/threadstone_suture")
-def TS_suture():
-    return render_template("html/packaging/threadstone_suture.html")
-
-@app.route("/packaging/nitnol_wire")
-def nitnol_wire():
-    return render_template("html/packaging/nitnol_wire.html")
-
-
-
-# tasks under manufacturing
-@app.route("/manufacturing/request_form")
-def request_form():
-    return render_template("html/manufacturing/request_form.html")
-
-@app.route("/manufacturing/production_sheet")
-def production_sheet():
-    return render_template("html/manufacturing/production_sheet.html")
-
-
-
-# tasks under insepction
-@app.route("/inspection/IS")
-def inspection_sheet():
-    return render_template("html/inspection/IS.html")
-
-
-
-# tasks under purchase order
-@app.route("/PO/PO_Sheet")
-def PO_sheet():
-    return render_template("html/PO/PO_Sheet.html")
-
 
 
 # functions under peek anchor
