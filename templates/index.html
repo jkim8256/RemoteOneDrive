@@ -7,7 +7,20 @@
     <title>ThreadStone</title>
 </head>
 <body>
-    <p>Connect OD to here - probably using flask</p>
+    <!--
+    <a href="/output">
+        <input type="button" value="onedrive load" />
+    </a>
+    <a href="/download">
+        <input type="button" value="file download" />
+    </a>
+    <a href="/upload">
+        <input type="button" value="file upload" />
+    </a>
+    -->
+    <button><a href = "/output">onedrive load</a></button> <!-- creates a new folder-->
+    <button><a href = "/download">file download</a></button>
+    <button><a href = "/upload">file upload</a></button>
     <form id="search">
         <input required placeholder="Search for a File" />
         <button>Search</button>
@@ -15,25 +28,25 @@
 
     <!-- searching for which category/folder to work on -->
     <form class = task id="packaging">
-        <a href="html/packaging.html">
+        <a href="/packaging">
             <input type="button" value="Packaging" />
         </a>
     </form>
 
     <form class = task id="manufacturing">
-        <a href="html/manufacturing.html">
+        <a href="/manufacturing">
             <input type="button" value="Manufacturing" />
         </a>
     </form>
 
     <form class = task id="inspection">
-        <a href="html/inspection.html">
+        <a href="/inspection">
             <input type="button" value="Inspection" />
         </a>
     </form>
 
     <form class = task id="po">
-        <a href="html/po.html">
+        <a href="/PO">
             <input type="button" value="Purchase Order" />
         </a>
     </form>

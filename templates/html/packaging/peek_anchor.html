@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peek Anchor</title>
+</head>
+<body>
+    <p>Peek Anchor document 1
+        <button><a href = "/download">file download</a></button> <!-- create a new custom download def under OD.py to exactly locate the document to download-->
+        <form id = "filename">
+            <input required placeholder="Enter File Name to upload" />
+            <!-- <button><a href = "/new_upload">file upload</a></button> -->
+            <button onclick=sendFilename()>file upload</button>
+        </form>
+    </p>
+
+    <p>Peek Anchor document 2
+        <button><a href = "/download">file download</a></button> <!-- create a new custom download def under OD.py to exactly locate the document to download-->
+        <form id = "filename">
+            <input required placeholder="Enter File Name to upload" />
+            <!-- <button><a href = "/new_upload">file upload</a></button> -->
+            <button onclick=sendFilename()>file upload</button>
+        </form>
+    </p>
+
+
+</body>
+<!-- script for uploading a custom file name-->
+<script> 
+    const search = document.querySelector("#filename");
+    const input = search.querySelector("input");
+    function sendFilename(event) {
+        //event.preventDefault();
+        const filename = input.value+".docx"
+        const request = new XMLHttpRequest()
+        request.open("POST", `/peek_anchor_upload/${JSON.stringify(filename)}`)
+        request.onload = () => {
+            const flaskmessage = request.responseText
+            console.log(flaskmessage)
+        }
+        request.send()
+    }
+    search.addEventListener("submit", sendFilename);
+</script>
+</html>
